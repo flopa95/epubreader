@@ -3,7 +3,7 @@ from ebooklib import epub
 import webbrowser
 import os
 
-ebookname = "Crazy Rich Asians.epub"
+ebookname = "Alibaba_ The House That Jack Ma Built by Duncan Clark.epub"
 book = epub.read_epub(ebookname)
 
 x=[]
@@ -22,7 +22,7 @@ for j in range(len(book_spine)):
     x.append(banana.get_body_content())
 
 ### Creating the directory for the HTML files to be stored in ###
-newpath = "C:/Users/Florian Parzhuber/Desktop/epubreader" + "/" + ebookname[:-5]
+newpath = "C:/Users/jerry-chung/Desktop/EbookReader" + "/" + ebookname[:-5]
 if not os.path.exists(newpath):
     os.makedirs(newpath)
 
@@ -34,7 +34,7 @@ for z in range(len(x)):
     f.close()
 
 ### Creating the directory for the image files to be stored in ###
-image_folder_path = "C:/Users/Florian Parzhuber/Desktop/epubreader" + "/" + ebookname[:-5] + "/"
+image_folder_path = "C:/Users/jerry-chung/Desktop/EbookReader" + "/" + ebookname[:-5] + "/"
 if not os.path.exists(image_folder_path):
     os.makedirs(image_folder_path)
 
@@ -45,7 +45,7 @@ for item in book.get_items():
     if item.get_type() == ebooklib.ITEM_IMAGE:
         print('==================================')
         print('NAME : ', item.get_name())
-        
+
         filename = str(item.get_name())
         directoryname = filename.rsplit("/",1)
         filename2 = filename.rsplit("/",0)
@@ -60,11 +60,3 @@ for item in book.get_items():
         #print('----------------------------------')
         #print(item.get_content())
         #print('==================================')
-
-#print(images.get_content())
-
-
-### Opening a chapter ###
-#webbrowser.open_new_tab("helloworld.html")
-
-
