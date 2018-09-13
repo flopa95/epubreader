@@ -20,9 +20,9 @@
             </div>
         </div>
         <div class="book">
-            <div class="page-left col-5">{{ leftpage }}</div>
+            <div class="page-left col-5">{{ leftpage|safe }}</div>
             <div class="page-break col-1"></div>
-            <div class="page-right col-5">test</div>
+            <div class="page-right col-5">{{ rightpage|safe}}</div>
         </div>
     </body>
 </html>
